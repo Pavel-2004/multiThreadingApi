@@ -1,7 +1,7 @@
 <?php
 class apiCall{
     //regular api call one by one
-    function regularGetCall($url, $vaue){
+    function regularGetCall($url, $value){
         
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);

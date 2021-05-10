@@ -1,15 +1,15 @@
 <?php
 class apiCall{
     //regular api call one by one
-    function regularGetCall($url){
+    function regularGetCall($url, $vaue){
         
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         $response = curl_exec($curl);
         $response = json_decode($response);
-    
-        return $response->atomicMass;
+        
+        return $response->$value;
         
     }
     //calling multiple APIs parallel
